@@ -1,21 +1,25 @@
 import { DataTypes } from "sequelize";
 import db from "../config/Database.js";
-import User from "./User.js";
+import Bot from "./Bot.js";
 
-const Bot = db.define("Bot", {
-  bot_id: {
+const Model = db.define("Model", {
+  model_id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,
   },
-  BotName: {
+  ModelName: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  Status: {
+  Architecture: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  ModelType: {
     type: DataTypes.STRING,
     allowNull: false,
   },
 });
 
-export default Bot;
+export default Model;
