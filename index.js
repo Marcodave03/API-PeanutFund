@@ -4,6 +4,8 @@ import http from "http";
 import dotenv from "dotenv";
 import sequelize from "./config/Database.js";
 import userRoute from "./route/userRoute.js";
+import botRoute from "./route/botRoute.js";
+import getRoute from "./route/getRoute.js";
 import "./models/Association.js";
 
 
@@ -16,6 +18,8 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/portofolio",userRoute);
+app.use("/api/bot",botRoute);
+app.use("/api/get",getRoute);
 
 const port = process.env.PORT;
 if (!port) {
