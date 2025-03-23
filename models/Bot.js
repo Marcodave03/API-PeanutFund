@@ -12,6 +12,10 @@ const Bot = db.define("Bot", {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  BotAPI: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
   Status: {
     type: DataTypes.STRING,
     allowNull: false,
